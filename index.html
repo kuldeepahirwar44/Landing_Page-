@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="nav1">
+        <div>
+          <p>Contact: Raisen Road, Kokta By-Pass, Bhopal</p>
+        </div>
+        <div>
+          <i class="fa fa-instagram"></i>
+          <i class="fa fa-google"></i>
+          <i class="fa fa-twitter"></i>
+          <a href="#">SignUp</a>
+          <a href="#">SignIn</a>
+        </div>
+      </nav>
+      <nav class="nav2">
+        <div class="logo">
+          <h1>BGI</h1>
+          <h6 id="cglName">[Bansal Group Of Institute]</h6>
+          <!-- <img src="images/logo.png" id="logo" alt=""> -->
+        </div>
+        <div class="menu">
+          <a href="#">Home</a>
+          <a href="#">Admission</a>
+          <a href="#">Courses</a>
+          <a href="#">Events</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+        </div>
+      </nav>
+
+      <div class="h-text">
+        <h1>
+          <h1>
+            Welcome To
+            <span
+              style="color: #e76e22; font-family: Abril Fatface, cursive"
+              class="wordyAnimation"
+              data-wordyanimation="100"
+            >
+              College
+            </span>
+          </h1>
+        </h1>
+        <p data-aos="fade-up">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt
+          ipsum facere expedita quod minima amet deleniti! Architecto
+          consequuntur, officiis a ipsum iusto perferendis deleniti, soluta
+          dolor eveniet alias molestiae quae repellendus, aut quas sit aliquam
+          magni nostrum modi iste quis? Iusto nisi eaque, id veritatis officia
+          commodi soluta ipsa sunt!
+        </p>
+        <div>
+          <a href="#">Courses</a>
+          <a href="#">Learn more</a>
+          <a href="#">Register</a>
+        </div>
+      </div>
+    </header>
+    <footer>
+      <span id="copy" class="wordyAnimation" data-wordyanimation="10">
+        Copyright &copy; 2023 Kuldeep Ahirwar.</span
+      >
+    </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      const wordyAnimationArr = document.querySelectorAll(".wordyAnimation");
+      wordyAnimationArr.forEach((wordyAnimation) => {
+        const initialTextArr = wordyAnimation.textContent.trim().split("");
+        wordyAnimation.textContent = "";
+        let i = 0;
+        const id = setInterval(() => {
+          if (
+            initialTextArr.length === wordyAnimation.textContent.trim().length
+          ) {
+            clearInterval(id);
+          } else {
+            wordyAnimation.textContent += initialTextArr[i++];
+          }
+        }, +wordyAnimation.dataset.wordyanimation);
+      });
+
+      AOS.init();
+    </script>
+  </body>
+</html>
